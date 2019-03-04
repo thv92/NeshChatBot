@@ -1,0 +1,40 @@
+{
+  "name": "neshchatbot",
+  "version": "1.0.0",
+  "description": "ChatBot that determines well routes per client request",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thv92/NeshChatBot.git"
+  },
+  "keywords": [
+    "nesh",
+    "chatbot",
+    "routes",
+    "bot",
+    "chat",
+    "dialogflow",
+    "nlp"
+  ],
+  "author": "Thien Vo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thv92/NeshChatBot/issues"
+  },
+  "homepage": "https://github.com/thv92/NeshChatBot#readme",
+  "dependencies": {
+    "botui": "^0.3.8",
+    "express": "^4.16.4",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "dotenv": "^6.2.0",
+    "nodemon": "^1.18.10"
+  },
+  "engines": {
+    "node": "10.15.2"
+  }
+}

@@ -2,6 +2,16 @@ const df = require('dialogflow');
 const uuid = require('uuid/v1');
 const projectId = process.env.PROJECT_ID;
 const sessionId = uuid();
+
+
+const config = {
+    credentials: {
+        private_key: process.env.GOOGLE_PRIVATE_KEY,
+        client_email: process.env.GOOGLE_CLIENT_EMAIL
+    }
+}
+
+
 const sessionClient = new df.SessionsClient();
 const sessionPath = sessionClient.sessionPath(projectId, sessionId);
 

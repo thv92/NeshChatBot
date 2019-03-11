@@ -90,22 +90,3 @@ function wrapper(fn) {
 
     });
 }
-
-
-
-
-//https://www.mapquestapi.com/staticmap/v4/getmap?key=Pqi6Z7PceCYcLTwUmqRxpOLT68Aypwl7&zoom=13&session=5c84e33c-012b-6750-02b4-1929-0ea2329148a6&size=400,200&bestfit= 29.46603, -95.450554,32.546429,-102.419746
-
-//API_KEY
-//zoom: 13
-//sessionId
-//size: 500,500?
-//center | bestfit => boundingBox
-//pois
-
-
-
-//for each leg:
-//  for each maneuver:
-//      distance => miles
-//      narrative => instruction

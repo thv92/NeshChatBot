@@ -4,7 +4,7 @@ Chatbot that gives barebones navigation to a user.
 User needs to ask, "Give me directions to a well."
 Then put in the Lease Name and Well Num and the bot will spit out a map with instructions.
 
-
+Deployed on heroku: https://nesh-routes-bot.herokuapp.com/
 
 ## Setup
 * Requires for you to have a Google Cloud Platform account with billing enabled

@@ -19,3 +19,9 @@ Deployed on heroku: https://nesh-routes-bot.herokuapp.com/
 ```
 node 10.15.2
 ```
+
+### APIs Used
+* FireStore
+* DialogFlow
+* Twilio
+* SendGrid

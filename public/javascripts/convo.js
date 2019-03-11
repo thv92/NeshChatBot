@@ -224,7 +224,7 @@ async function processFormSubmission(queryData, address) {
     let waypoints = dbData.queryResults.slice(0, -1).map((waypoint) => {
         return [waypoint.SurfaceLat, waypoint.SurfaceLong].join(',');
     });
-    let dirResponse = await fetch('http://www.mapquestapi.com/directions/v2/route?key=Pqi6Z7PceCYcLTwUmqRxpOLT68Aypwl7&json=' + JSON.stringify({
+    let dirResponse = await fetch('https://www.mapquestapi.com/directions/v2/route?key=Pqi6Z7PceCYcLTwUmqRxpOLT68Aypwl7&json=' + JSON.stringify({
         locations: [startPoint.join(','), ...waypoints, furthest.SurfaceLat + ',' + furthest.SurfaceLong],
         options: {
             shapeFormat: 'cmp6',

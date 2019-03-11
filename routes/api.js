@@ -104,6 +104,7 @@ router.post('/sms', (req, res) => {
             return `-Directions from ${links.fromName} to ${links.toName}:\n${links.url}`
         }).join('\n');
         const client = require('twilio')(process.env.TWILIO_SID, process.env.TWILIO_AUTH_TOKEN);
+        console.log('PHone: ' + phoneNumber);
         client.messages.create({
             body: messages,
             from: process.env.TWILIO_NUMBER,

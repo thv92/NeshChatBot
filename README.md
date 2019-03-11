@@ -13,7 +13,7 @@ Deployed on heroku: https://nesh-routes-bot.herokuapp.com/
 * To run the project locally:
     * export NODE_ENV=development
     * run "npm startWatch"
-
+* Twilio trial version requires that you verify a number in order to send a text message to it, so please let me know the number you'd like to send the text message to
 ### Prerequisites
 
 ```

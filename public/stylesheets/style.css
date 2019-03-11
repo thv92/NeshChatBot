@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+  flex-direction: column;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #54a3d7;
+}
+
+#title-container {
+  height: 7em;
+}
+
+#title-container h1 {
+  font-size: 3.6em;
+  color: rgba(255,255,255, .98);
+}
+
+#content-area {
+  display: flex;
+  margin-top: 2em;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#bot-area {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 40%;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.botMargin {
+  margin: auto;
+}
+
+#right-area {
+  display: flex;
+  background-color: white;
+  width: 40%;
+  justify-content: center;
+  animation: slide-right .8s ease-in;
+}
+
+#map {
+  height: 600px;
+  width: 700px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  animation: appear .9s ease-in;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.buttonContainer {
+  display: flex;
+  margin-top: 2.5em;
+  justify-content: flex-end;
+}
+
+.submitButton {
+  display: flex;
+  border-radius: 6%;
+  width: 5em;
+  height: 2.5em;
+  justify-content: center;
+  background-color: grey;
+  color: #efefef;
+  cursor: pointer;
+  opacity: .9;
+  transition: all ease-out .1s;
+}
+
+.submitButton:hover {
+  transform: scale(1.07, 1.05);
+  opacity: 1;
+}
+
+.submitButton:focus {
+  outline: 0;
+}
+
+#well-form-container {
+  display: flex;
+  width: 100%;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#well-form {
+  display: flex;
+  margin-top: 2em;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.well-form-label-div {
+  display: flex;
+  width: 60%;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.well-form-label-div label {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.well-form-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.humanTextInput {
+  text-align: right;
+  width: 90%;
+}
+
+
+
+
+
+@keyframes slide-right {
+  0% {
+    opacity: 0%;
+    transform: translateX(200%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

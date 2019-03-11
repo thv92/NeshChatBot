@@ -117,5 +117,12 @@ router.post('/sms', (req, res) => {
 });
 
 
+router.post('/db/initFSDB', (req, res) => {
+    const loadQuery = require('../db/loadInitialData');
+    loadQuery.insertInitialDataFS();
+    res.sendStatus(200);
+});
+
+
 module.exports = router;
 

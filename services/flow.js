@@ -2,7 +2,16 @@ const df = require('dialogflow');
 const uuid = require('uuid/v1');
 const projectId = process.env.PROJECT_ID;
 const sessionId = uuid();
-const sessionClient = new df.SessionsClient();
+
+let sessionClient = null;
+if (process.env.NODE === 'development') {
+    sessionClient = new df.SessionsClient();
+} else {
+    credentials = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS);
+    sessionClient = new df.SessionsClient(credentials);
+}
+
+
 const sessionPath = sessionClient.sessionPath(projectId, sessionId);
 
 async function getQueryResult(query, contexts = null) {

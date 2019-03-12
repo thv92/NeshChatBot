@@ -7,8 +7,9 @@ let sessionClient = null;
 if (process.env.NODE === 'development') {
     sessionClient = new df.SessionsClient();
 } else {
-    credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
-    sessionClient = new df.SessionsClient(credentials);
+    let credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
+    let config = {credentials};
+    sessionClient = new df.SessionsClient(config);
 }
 
 

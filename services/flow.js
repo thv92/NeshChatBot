@@ -4,7 +4,7 @@ const projectId = process.env.PROJECT_ID;
 const sessionId = uuid();
 
 let sessionClient = null;
-if (process.env.NODE === 'development') {
+if (process.env.NODE_ENV === 'development') {
     sessionClient = new df.SessionsClient();
 } else {
     let credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);

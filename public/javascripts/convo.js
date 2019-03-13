@@ -38,6 +38,11 @@ function conversationStart(reset = true) {
 }
 
 function findDataFromCoord(latlng, dataset) {
+    console.log('Comparison Method: ');
+    console.log('Latlng: ');
+    console.log(latlng);
+    console.log('Dataset: ');
+    console.log(dataset);
     return dataset.find((data) => {
         return data.SurfaceLat === latlng.lat && data.SurfaceLong === latlng.lng;
     });
@@ -117,6 +122,8 @@ async function wrapUpAfterMap(mapLinks) {
 async function createMapLinks(dResponse, data) {
     console.log('Test Dresponse');
     console.log(dResponse);
+    console.log('Map Links Data:');
+    console.log(data);
     
     let locations = dResponse.locations;
     let locationSequence = dResponse.locationSequence;
@@ -139,10 +146,10 @@ async function createMapLinks(dResponse, data) {
         if (pairs[0] === 0) {
             fromName = from.street;
         } else {
-            let foundFromData = findDataFromCoord(from.latLng, data);
+            let foundFromData = data[pairs[0] - 1];
             fromName = foundFromData.LeaseName + ' - ' + foundFromData.WellNum;
         }
-        let foundToData = findDataFromCoord(to.latLng, data);
+        let foundToData = data[pairs[1] - 1];
         let toName = foundToData.LeaseName + ' - ' + foundToData.WellNum;
         
         let url = `https://www.google.com/maps/dir/?api=1&origin=${from.latLng.lat + ',' + from.latLng.lng}\
